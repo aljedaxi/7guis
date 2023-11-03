@@ -1,0 +1,104 @@
+<html lang="en">
+	<head>
+		<script src="./index.js" type="module"></script>
+		<link rel="stylesheet" href="./index.css"/>
+	</head>
+	<body>
+		<h1>7 guis</h1>
+		<form id="counter">
+			<h2>counter</h2>
+			<input type="number" name="counter" value="1" disabled="true">
+			<button type="submit">count</button>
+		</form>
+		<form id="temp">
+			<h2>Temp Converter</h2>
+			<label>
+				Celsius
+				<input type="number" inputmode="numeric" pattern="\d*" name="celsius">
+			</label>
+			<label>
+				Fahrenheit
+				<input type="number" inputmode="numeric" pattern="\d*" name="fahrenheit">
+			</label>
+		</form>
+		<form id="flight">
+			<h2>book flight</h2>
+			<select id="directions" name="directions" value="one-way">
+				<option value="one-way">one-way flight</option>
+				<option value="return">return flight</option>
+			</select>
+			<label>
+				outward
+				<input required="true" type="date" id="outward" name="outward">
+			</label>
+			<label>
+				return
+				<input type="date" id="return" name="return" disabled="true">
+			</label>
+			<button type="submit">Book</button>
+		</form>
+		<form id="timer">
+			<h2>timer</h2>
+			<label>
+				Elapsed Time:
+				<progress id="elapsed" max="100" value="0">0%</progress>
+				<div id="elapsed-text"></div>
+			</label>
+			<label>
+				Duration:
+				<input type="range" id="duration" name="duration" max="240" min="0" value="60" step="1"/>
+			</label>
+			<button id='reset'>Reset</button>
+		</form>
+		<form id="CRUD">
+			<h2>CRUD</h2>
+			<div></div>
+			<label>
+				Filter prefix:
+				<input type="text" name="prefix" />
+			</label>
+			<div></div>
+			<fieldset id="database-radio">
+			</fieldset>
+			<div>
+				<label>
+					Name:
+					<input type="text" name="name" />
+				</label>
+				<br>
+				<label>
+					Surname:
+					<input type="text" name="surname" />
+				</label>
+			</div>
+			<div class="spanner">
+				<button id="create">Create</button>
+				<button id="update" disabled="">Update</button>
+				<button id="delete" disabled="">Delete</button>
+			</div>
+			<datalist id="database">
+				<option value="Hans Emil"></option>
+				<option value="Max Mustermann"></option>
+				<option value="Roman Tisch"></option>
+			</datalist>
+		</form>
+		<form id="circles">
+			<h2>Circle Draw</h2>
+			<div>
+				<button id="undo" disabled="">Undo</button>
+				<button id="redo" disabled="">Redo</button>
+			</div>
+			<svg width="600" height="600" id="circle-svg">alt text</svg>
+		</form>
+		<dialog id="circleDialog">
+			<form>
+				<label>
+					Adjust radius of circle
+					<input autofocus="" name="radius" type="range" min="0" max="300" step="1" value="50">
+				</label>
+				<button id="cancel" value="cancel" formmethod="dialog">cancel</button>
+				<button id="save" value="save" formmethod="dialog">save</button>
+			</form>
+		</dialog>
+	</body>
+</html>

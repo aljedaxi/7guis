@@ -1,0 +1,26 @@
+input:invalid {
+	background-color: red;
+}
+
+button:invalid {
+	background-color: red;
+}
+
+body {
+	margin: 10;
+}
+
+#CRUD {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4px;
+}
+
+circle {
+	stroke: black;
+	stroke-width: 3px;
+	fill: none;
+}
+circle.selected {
+	fill: grey;
+}
