@@ -24,3 +24,6 @@ circle {
 circle.selected {
 	fill: grey;
 }
+form {
+	margin: 0
+}

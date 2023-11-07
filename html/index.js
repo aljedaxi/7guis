@@ -1,8 +1,11 @@
+//
 // for (const e of document.querySelectorAll('form')) {
 // 	e.addEventListener('submit', e => {
 // 		e.preventDefault()
 // 	})
 // }
+//
+import {c} from './util.js'
 document.querySelector('#counter').addEventListener('submit', e => {
 	e.preventDefault()
 	const {target} = e
@@ -94,13 +97,6 @@ const radioChanged = e => {
 	console.log(e.target)
 	deleteButton.removeAttribute('disabled')
 	update.removeAttribute('disabled')
-}
-const c = type => ({onChange, ...props} = {}) => children => {
-	const newElement = document.createElement(type)
-	Object.assign(newElement, props ?? {})
-	if (onChange !== undefined) newElement.addEventListener('change', onChange)
-	for (const child of children ?? []) newElement.appendChild(child)
-	return newElement
 }
 const populateRadio = (filter = '') => {
 	databaseRadio.innerHTML = ''
